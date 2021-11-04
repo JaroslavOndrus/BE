@@ -17,10 +17,16 @@ public class Main {
         array[2] = new Person("Jaro", 17, 25.2);
         array[3] = new Person("Timo", 18, 58555.86);
         array[4] = new Person("Svano", 12, 3.58);
+       double wholeBudget = 0;
 
         for(int i = 0; i < array.length; i++){
             array[i].ShowPerson();
         }
+
+        for(int i = 0; i < array.length; i++){
+            wholeBudget += array[i].getBudget();
+        }
+        System.out.println("Budget Together: "+wholeBudget);
     }
 }
 
@@ -73,6 +79,10 @@ class Person{
 
     public void ShowPerson(){
         System.out.println("Person name: "+Name+", Person Age: "+Age+", Person Budget: "+Budget);
+    }
+
+    public void SumBudget(){
+
     }
 
     public String getName() {
